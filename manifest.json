@@ -1,11 +1,11 @@
 {
 	"name":"PWA Tutorial",
 	"short_name":"PWA",
-	"start_url":"index.html",
+	"start_url":"/py/index.html",
 	"display":"standalone",
 	"background_color":"#5900b3",
 	"theme_color":"black",
-	"scope": ".",
+	"scope": "/py/",
 	"description":"This is a PWA tutorial.",
 	"icons":[
 	{
@@ -20,4 +20,3 @@
 	}
 ]
 }
-
