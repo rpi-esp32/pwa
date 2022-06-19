@@ -10,27 +10,54 @@
 <meta name="theme-color" content="black">
 <!-- Manifest File link -->
 <link rel="manifest" href="manifest.json">	
+	
+<link rel="stylesheet" href="https://pyscript.net/alpha/pyscript.css" crossorigin="anonymous"/>
+<script defer src="https://pyscript.net/alpha/pyscript.js" crossorigin="anonymous"></script>
+<title>PWA Tutorial</title>
 </head>
 
+	
 <body>
-	<title>PWA Tutorial</title>
+
 	<h1 style="color: green;">GeeksforGeeks</h1>
 <p>
 	This is a simple tutorial for
 	creating a PWA application.
 </p>
+	
+	
+<py-script>
+pyscript.write('1', "this is from in-line pyscript")
+</py-script>
 
+<py-repl std-out="output" std-err="errors"></py-repl>
 
-<script>
+    <div>
+      <b>Output</b><hr>
+      <div id="output"></div>
+    </div>
+<div>
+      <b>Errors and Warnings</b><hr>
+      <div id="errors"></div>
+</div>
+	
+	
+	
+</script><script src="src/main.js" type = "text/javascript"></script>	
+<py-script src="src/main.py"></py-script>
+
+<script type = "text/javascript">
 	window.addEventListener('load', () => {registerSW();});
 	// Register the Service Worker
 	async function registerSW() {
 	if ('serviceWorker' in navigator) {
 		try {
-		await navigator.serviceWorker.register('sw.js');}
+		await navigator.serviceWorker.register('/pwa/sw.js', {scope: '/pwa/'});}
 		catch (e) {console.log('SW registration failed');}
 	}}
 </script>
 	
 </body>
 </html>
+
+
