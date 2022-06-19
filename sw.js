@@ -1,6 +1,5 @@
 
-const assets = ["/py/", "/py/index.html", "https://pyscript.net/alpha/pyscript.css", "https://pyscript.net/alpha/pyscript.js", "/py/src/main.py", "/py/src/main.js"];
-//const assets = ["/py/index.html", "/py/src/main.js", "/py/src/main.py"];
+const assets = ["/pwa/", "/pwa/index.html", "https://pyscript.net/alpha/pyscript.css", "https://pyscript.net/alpha/pyscript.js", "/pwa/src/main.py", "/pwa/src/main.js"];
 
 console.log("maurice file sw.js FULL ASSETS"); 
 
@@ -20,4 +19,3 @@ self.addEventListener("fetch", fetchEvent => {
 
 });
 
-//    fetchEvent.waitUntil(caches.open("pwa").then((c) => {return c.addAll(["/py/src/main.py", "/py/index.html"]);}));
