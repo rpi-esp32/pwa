@@ -15,7 +15,21 @@
 <body>
   
   hello world
-  
+<script type="text/javascript">
+    function requestOrientationPermission(){
+        DeviceOrientationEvent.requestPermission()
+        .then(response => {
+            if (response == 'granted') {
+                window.addEventListener('deviceorientation', (e) => {
+                    // do something with e
+                })
+            }
+        })
+        .catch(console.error)
+    }
+</script>
+
+<button onclick='requestOrientationPermission();'>Request orientation permission</button>
   </body>
   
 </html>  
